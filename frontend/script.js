@@ -1,7 +1,7 @@
 const form = document.getElementById('predict-form');
 const result = document.getElementById('result');
 
-const API_URL = 'http://localhost:5000/predict';
+const API_URL = '/predict';
 
 form.addEventListener('submit', async (event) => {
   event.preventDefault();

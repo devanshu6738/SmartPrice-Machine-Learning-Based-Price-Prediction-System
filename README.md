@@ -1,4 +1,4 @@
-# SmartPrice – Machine Learning Based Price Prediction System
+# SmartPrice - Machine Learning Based Price Prediction System
 
 SmartPrice is a full-stack ML web app that predicts the price of electronic products (smartphones or laptops) based on specs such as brand, RAM, storage, processor speed, battery capacity, and camera megapixels.
 
@@ -71,6 +71,15 @@ Response:
 ## Frontend
 
 Open `frontend/index.html` in a browser after starting the Flask server. The UI sends requests to `/predict` and displays the estimated price.
+
+## Deploy on Render
+
+1. Push this repo to GitHub.
+2. In Render, create a new Web Service and connect the repo.
+3. Render will detect `render.yaml` automatically. If not, set:
+   - Build Command: `pip install -r requirements.txt && python backend/train_model.py`
+   - Start Command: `gunicorn --chdir backend app:app`
+4. Deploy. Use the generated URL as your base API URL.
 
 ## Optional Advanced Features
 - Model comparison is included in `backend/train_model.py` output.
